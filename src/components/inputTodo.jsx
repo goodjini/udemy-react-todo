@@ -10,10 +10,15 @@ const style = {
 };
 
 export const InputTodo = (props) => {
-  const { todoText, onChange, onClick } = props;
+  const { todoText, onChange, onClick, disable } = props;
   return (
     <div style={style}>
-      <input placeholder="TODOを入力" value={todoText} onChange={onChange} />
+      <input
+        disabled={disable}
+        placeholder="TODOを入力"
+        value={todoText}
+        onChange={onChange}
+      />
       <button onClick={onClick}>追加</button>
     </div>
   );
